@@ -1,14 +1,15 @@
 package com.example.todo.ViewModel
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import android.content.ClipData
+import androidx.lifecycle.*
 import com.example.todo.data.Todo
 import com.example.todo.data.TodoDao
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
 class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
+
+    val allItems: LiveData<List<Todo>> = todoDao.getAllData().asLiveData()
 
     fun isEntryValid(
         Title: String,
