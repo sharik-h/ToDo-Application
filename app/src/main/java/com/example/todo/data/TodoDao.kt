@@ -15,4 +15,7 @@ interface TodoDao {
     @Query("SELECT * FROM todo_data ORDER BY id ASC ")
     fun getAllData(): Flow<List<Todo>>
 
+    @Query("SELECT * FROM todo_data WHERE id = :id")
+    fun getData(id: Int): Flow<Todo>
+
 }

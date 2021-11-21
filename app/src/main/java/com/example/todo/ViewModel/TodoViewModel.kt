@@ -39,6 +39,10 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
         }
     }
 
+    fun retriveData(id: Int): LiveData<Todo>{
+        return todoDao.getData(id).asLiveData()
+    }
+
 }
 
 class TodoViewModelFactory(private val todoDao: TodoDao): ViewModelProvider.Factory {
