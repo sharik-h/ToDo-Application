@@ -43,6 +43,31 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
         return todoDao.getData(id).asLiveData()
     }
 
+    fun updateTodo(
+        id: Int,
+        Title: String,
+        notes: String) {
+        val updatedtodo = getupdatedtodoEntry(id, Title, notes)
+        UpdateTodo(updatedtodo)
+    }
+
+    private fun UpdateTodo(updatedtodo: Todo) {
+        viewModelScope.launch {
+            todoDao.update(updatedtodo)
+        }
+    }
+
+    private fun getupdatedtodoEntry(
+        id: Int,
+        title: String,
+        notes: String): Todo {
+        return Todo(
+            id = id,
+            Title = title,
+            Notes = notes
+        )
+    }
+
 }
 
 class TodoViewModelFactory(private val todoDao: TodoDao): ViewModelProvider.Factory {
