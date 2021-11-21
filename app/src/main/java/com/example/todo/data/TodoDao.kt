@@ -12,6 +12,9 @@ interface TodoDao {
     @Update
     suspend fun update(todo: Todo)
 
+    @Delete
+    suspend fun delete(todo: Todo)
+
     @Query("SELECT * FROM todo_data ORDER BY id ASC ")
     fun getAllData(): Flow<List<Todo>>
 

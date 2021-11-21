@@ -68,6 +68,12 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
         )
     }
 
+    fun deleteTodoData(todo: Todo) {
+        viewModelScope.launch {
+            todoDao.delete(todo)
+        }
+    }
+
 }
 
 class TodoViewModelFactory(private val todoDao: TodoDao): ViewModelProvider.Factory {

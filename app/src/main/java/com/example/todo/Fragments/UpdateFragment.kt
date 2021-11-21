@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -59,7 +60,14 @@ class UpdateFragment : Fragment() {
             updateTodoTitle.setText(todo.Title, TextView.BufferType.SPANNABLE)
             updateTodoNotes.setText(todo.Notes, TextView.BufferType.SPANNABLE)
             updateButton.setOnClickListener{ updatetodo() }
+            deleteButton.setOnClickListener{ deleteTodo() }
         }
+    }
+
+    private fun deleteTodo() {
+        viewModel.deleteTodoData(todo)
+        val action = UpdateFragmentDirections.actionUpdateFragmentToListFragment()
+        findNavController().navigate(action)
     }
 
     private fun updatetodo() {
