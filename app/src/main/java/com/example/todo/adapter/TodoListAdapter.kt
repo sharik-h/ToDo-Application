@@ -1,10 +1,13 @@
 package com.example.todo.adapter
 
+import android.graphics.Color
+import android.provider.Settings.Secure.getString
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.todo.R
 import com.example.todo.data.Todo
 import com.example.todo.databinding.ListSampleBinding
 
@@ -30,9 +33,11 @@ class TodoListAdapter(private val OnItemClicked: (Todo) -> Unit) :
             RecyclerView.ViewHolder(binding.root) {
 
             fun bind(todo: Todo) {
+
                 binding.apply {
                     title.text = todo.Title
                     notes.text = todo.Notes
+                    sampleCard.setCardBackgroundColor(Color.parseColor(todo.color))
                 }
 
             }

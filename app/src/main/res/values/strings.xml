@@ -15,4 +15,6 @@
     <string name="update">update</string>
     <string name="enter_notes">Enter your notes here</string>
     <string name="enter_the">Give it a title</string>
+    <string name="add_new_task">Add new task</string>
+    <string name="color">%c</string>
 </resources>

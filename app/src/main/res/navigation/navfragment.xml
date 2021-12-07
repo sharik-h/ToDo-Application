@@ -25,7 +25,11 @@
         <action
             android:id="@+id/action_addFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_bottom_sheet2"
+            app:destination="@id/bottom_sheet" />
     </fragment>
+
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.todo.Fragments.DetailFragment"
@@ -50,4 +54,12 @@
             android:name="id"
             app:argType="integer" />
     </fragment>
+    <dialog
+        android:id="@+id/bottom_sheet"
+        android:name="com.example.todo.Fragments.Bottom_sheet"
+        android:label="Bottom_sheet" >
+        <action
+            android:id="@+id/action_bottom_sheet_to_addFragment"
+            app:destination="@id/addFragment" />
+    </dialog>
 </navigation>

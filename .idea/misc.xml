@@ -3,12 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/activity_main.xml" value="0.2657407407407407" />
-        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_add.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_list.xml" value="0.1152542372881356" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/add_outline.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color1.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color2.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color3.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color4.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color5.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color_icon.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/addwidgets.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/botton_sample.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_add.xml" value="0.264" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_detail.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_list.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_update.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/list_sample.xml" value="0.12878787878787878" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/list_sample.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

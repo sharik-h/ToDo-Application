@@ -6,15 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
 import com.example.todo.ViewModel.TodoViewModel
 import com.example.todo.ViewModel.TodoViewModelFactory
 import com.example.todo.data.TodoApplication
 import com.example.todo.databinding.FragmentAddBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class AddFragment : Fragment() {
+
+    val colors = arrayOf("#FF0000", "#1E90FF", "#00FF00", "#00FFFF", "#FF1493", "#FFA500", "#FFFF00")
+    var color = "#FFFFFFFF"
 
     private val viewModel: TodoViewModel by activityViewModels {
         TodoViewModelFactory (
@@ -43,13 +46,18 @@ class AddFragment : Fragment() {
             addNewTodoData()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }
+        binding.changeColor.setOnClickListener{
+            color = colors.random()
+            findNavController().navigate(R.id.action_addFragment_to_bottom_sheet2)
+        }
     }
 
     private fun addNewTodoData() {
         if (isEntryValid()){
             viewModel.addNewTodoData(
                 binding.TodoTitle.text.toString(),
-                binding.TodoNotes.text.toString()
+                binding.TodoNotes.text.toString(),
+
             )
         }
     }

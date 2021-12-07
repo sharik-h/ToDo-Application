@@ -1,6 +1,5 @@
 package com.example.todo.ViewModel
 
-import android.content.ClipData
 import androidx.lifecycle.*
 import com.example.todo.data.Todo
 import com.example.todo.data.TodoDao
@@ -11,6 +10,13 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     val allItems: LiveData<List<Todo>> = todoDao.getAllData().asLiveData()
 
+     var color = "red"
+
+    fun setcolor(color: String){
+          this.color = color
+    }
+
+
     fun isEntryValid(
         Title: String,
         Notes: String): Boolean {
@@ -20,17 +26,21 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     fun addNewTodoData(
         Title: String,
-        Notes: String ) {
-        val newData = getNewData(Title, Notes)
+        Notes: String
+    ) {
+               val newData = getNewData(Title, Notes, color)
         InsertNewTodo(newData)
     }
 
     private fun getNewData(
         title: String,
-        notes: String): Todo  {
+        notes: String,
+        color: String
+    ): Todo  {
         return Todo(
             Title = title,
-            Notes = notes )
+            Notes = notes,
+            color = color)
     }
 
     private fun InsertNewTodo(todo: Todo) {
@@ -46,8 +56,8 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
     fun updateTodo(
         id: Int,
         Title: String,
-        notes: String) {
-        val updatedtodo = getupdatedtodoEntry(id, Title, notes)
+        notes: String ) {
+        val updatedtodo = getupdatedtodoEntry(id, Title, notes )
         UpdateTodo(updatedtodo)
     }
 
@@ -60,11 +70,14 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
     private fun getupdatedtodoEntry(
         id: Int,
         title: String,
-        notes: String): Todo {
+        notes: String,
+
+    ): Todo {
         return Todo(
             id = id,
             Title = title,
-            Notes = notes
+            Notes = notes,
+            color = "red"
         )
     }
 

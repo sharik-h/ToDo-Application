@@ -75,8 +75,7 @@ class UpdateFragment : Fragment() {
             viewModel.updateTodo(
                 this.navigationArgs.id,
                 this.binding.updateTodoTitle.text.toString(),
-                this.binding.updateTodoNotes.text.toString()
-            )
+                this.binding.updateTodoNotes.text.toString() )
             val action = UpdateFragmentDirections.actionUpdateFragmentToListFragment()
             findNavController().navigate(action)
         }
