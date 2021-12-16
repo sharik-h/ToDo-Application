@@ -1,15 +1,21 @@
 package com.example.todo.Fragments
 
+import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.navigateUp
 import com.example.todo.R
 import com.example.todo.ViewModel.TodoViewModel
 import com.example.todo.ViewModel.TodoViewModelFactory
 import com.example.todo.data.TodoApplication
+import com.example.todo.databinding.FragmentAddBinding
 import com.example.todo.databinding.FragmentBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -17,6 +23,7 @@ class Bottom_sheet : BottomSheetDialogFragment() {
 
     private var _binding: FragmentBottomSheetBinding? = null
     private val binding get() = _binding!!
+
 
     private val viewmodel: TodoViewModel by activityViewModels {
         TodoViewModelFactory (
@@ -26,7 +33,6 @@ class Bottom_sheet : BottomSheetDialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -38,26 +44,36 @@ class Bottom_sheet : BottomSheetDialogFragment() {
         return binding.root
     }
 
+
+    @SuppressLint("StringFormatMatches")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.aquaButton.setOnClickListener{
-            viewmodel.setcolor("#00FFFF")
+           changeColor("#00FFFF")
         }
         binding.yellowButton.setOnClickListener{
-            viewmodel.setcolor("#FFFF00")
+           changeColor("#FFFF00")
         }
         binding.greenButton.setOnClickListener{
-            viewmodel.setcolor("#00FF00")
+           changeColor("#00FF00")
         }
         binding.redButton.setOnClickListener{
-            viewmodel.setcolor("#FF0000")
+           changeColor("#FF0000")
         }
         binding.orangeButton.setOnClickListener{
-            viewmodel.setcolor("#FFA500")
+            changeColor("#FFA500")
         }
         binding.pinkButton.setOnClickListener{
-            viewmodel.setcolor("#FF1493")
+          changeColor("#FF1493")
         }
+
     }
+
+    fun changeColor(color: String) {
+        viewmodel.setcolor(color)
+        val action = Bottom_sheetDirections.actionBottomSheetToAddFragment(color)
+        findNavController().navigate(action)
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()

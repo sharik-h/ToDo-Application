@@ -28,6 +28,11 @@
         <action
             android:id="@+id/action_addFragment_to_bottom_sheet2"
             app:destination="@id/bottom_sheet" />
+        <argument
+            android:name="color"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue="#FFFF00"/>
     </fragment>
 
     <fragment
@@ -60,6 +65,8 @@
         android:label="Bottom_sheet" >
         <action
             android:id="@+id/action_bottom_sheet_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="true" />
     </dialog>
 </navigation>

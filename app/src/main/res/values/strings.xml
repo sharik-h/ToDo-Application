@@ -16,5 +16,10 @@
     <string name="enter_notes">Enter your notes here</string>
     <string name="enter_the">Give it a title</string>
     <string name="add_new_task">Add new task</string>
-    <string name="color">%c</string>
+    <string name="notes">Notes</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="add_new_note">Add new Note</string>
+    <string name="title">Title</string>
+
+    <string name="color">%s</string>
 </resources>

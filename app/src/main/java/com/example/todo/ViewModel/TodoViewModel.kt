@@ -1,6 +1,7 @@
 package com.example.todo.ViewModel
 
 import androidx.lifecycle.*
+import com.example.todo.Fragments.AddFragment
 import com.example.todo.data.Todo
 import com.example.todo.data.TodoDao
 import kotlinx.coroutines.launch
@@ -10,12 +11,16 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     val allItems: LiveData<List<Todo>> = todoDao.getAllData().asLiveData()
 
-     var color = "red"
+    val colors = arrayOf("#FF0000", "#1E90FF", "#00FF00", "#00FFFF", "#FF1493", "#FFA500", "#FFFF00")
+     var color = colors.random()
 
     fun setcolor(color: String){
           this.color = color
     }
 
+    fun whichcolor(): String {
+        return color
+    }
 
     fun isEntryValid(
         Title: String,
