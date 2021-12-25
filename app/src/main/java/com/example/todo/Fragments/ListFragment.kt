@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -54,10 +55,11 @@ class ListFragment : Fragment() {
         }
         }
         binding.recyclerView.layoutManager = GridLayoutManager(this.context,2)
-
+        //add button functions
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
+        //search bar function
     }
 
     override fun onDestroy() {

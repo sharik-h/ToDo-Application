@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable-v24/rounded_botton.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/add_outline.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color.xml" value="0.290625" />
@@ -13,6 +14,8 @@
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color5.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color_icon.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color_identifier.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/rounded_edittext.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/search_icon.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/addwidgets.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/botton_sample.xml" value="0.27447916666666666" />

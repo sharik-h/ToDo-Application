@@ -22,4 +22,5 @@
     <string name="title">Title</string>
 
     <string name="color">%s</string>
+    <string name="add_new_note1">Add New Note</string>
 </resources>
