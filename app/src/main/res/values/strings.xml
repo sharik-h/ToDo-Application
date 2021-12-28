@@ -1,14 +1,5 @@
 <resources>
     <string name="app_name">Todo</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delete">delete</string>
@@ -23,4 +14,7 @@
 
     <string name="color">%s</string>
     <string name="add_new_note1">Add New Note</string>
+    <string name="sample_title">sample title</string>
+    <string name="this_is_sample_note">this is sample note.</string>
+    <string name="notes_sample">This application helps you to save small notes thal you would like to be remaindered later, Like things that you are likely to forget about like homework, meetings, function etc.. . </string>
 </resources>

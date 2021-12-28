@@ -1,7 +1,6 @@
 package com.example.todo.ViewModel
 
 import androidx.lifecycle.*
-import com.example.todo.Fragments.AddFragment
 import com.example.todo.data.Todo
 import com.example.todo.data.TodoDao
 import kotlinx.coroutines.launch
@@ -10,17 +9,6 @@ import java.lang.IllegalArgumentException
 class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     val allItems: LiveData<List<Todo>> = todoDao.getAllData().asLiveData()
-
-    val colors = arrayOf("#FF0000", "#1E90FF", "#00FF00", "#00FFFF", "#FF1493", "#FFA500", "#FFFF00")
-     var color = colors.random()
-
-    fun setcolor(color: String){
-          this.color = color
-    }
-
-    fun whichcolor(): String {
-        return color
-    }
 
     fun isEntryValid(
         Title: String,
@@ -31,7 +19,8 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     fun addNewTodoData(
         Title: String,
-        Notes: String
+        Notes: String,
+        color: String
     ) {
                val newData = getNewData(Title, Notes, color)
         InsertNewTodo(newData)
@@ -61,8 +50,10 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
     fun updateTodo(
         id: Int,
         Title: String,
-        notes: String ) {
-        val updatedtodo = getupdatedtodoEntry(id, Title, notes )
+        notes: String,
+        color: String
+    ) {
+        val updatedtodo = getupdatedtodoEntry(id, Title, notes, color )
         UpdateTodo(updatedtodo)
     }
 
@@ -76,13 +67,13 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
         id: Int,
         title: String,
         notes: String,
-
+        color: String
     ): Todo {
         return Todo(
             id = id,
             Title = title,
             Notes = notes,
-            color = "red"
+            color = color
         )
     }
 

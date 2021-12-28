@@ -14,6 +14,7 @@
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color5.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color_icon.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/color_identifier.xml" value="0.290625" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/detail_icon.xml" value="0.28615384615384615" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/rounded_edittext.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/drawable/search_icon.xml" value="0.290625" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_add.xml" value="0.264" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_detail.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_detail__view.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_list.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/sharikh/AndroidStudioProjects/Todo/app/src/main/res/layout/fragment_update.xml" value="0.27447916666666666" />

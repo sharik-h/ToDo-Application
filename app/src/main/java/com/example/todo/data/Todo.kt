@@ -10,5 +10,5 @@ data class Todo (
     val id: Int = 0,
     @ColumnInfo(name = "Title")val Title: String,
     @ColumnInfo(name = "Notes")val Notes: String,
-    @ColumnInfo(name = "color")val color: String
+    @ColumnInfo(name = "color") var color: String
     )

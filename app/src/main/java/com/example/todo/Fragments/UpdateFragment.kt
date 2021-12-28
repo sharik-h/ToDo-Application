@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.todo.R
 import com.example.todo.ViewModel.TodoViewModel
 import com.example.todo.ViewModel.TodoViewModelFactory
 import com.example.todo.data.Todo
@@ -29,6 +27,8 @@ class UpdateFragment : Fragment() {
     }
 
     lateinit var todo: Todo
+    private lateinit var color: String
+
 
     private var _binding: FragmentUpdateBinding? = null
     private val binding get() = _binding!!
@@ -49,25 +49,38 @@ class UpdateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.id
+
         viewModel.retriveData(id).observe(this.viewLifecycleOwner){ selectedItem ->
              todo = selectedItem
+
             bind(todo)
+        }
+        binding.redButton.setOnClickListener{
+          color  = "#FF0000"
+        }
+        binding.orangeButton.setOnClickListener{
+            color  = "#FFA500"
+        }
+        binding.yellowButton.setOnClickListener{
+            color  = "#FFFF00"
+        }
+        binding.greenButton.setOnClickListener{
+            color  = "#00FF00"
+        }
+        binding.aquaButton.setOnClickListener{
+            color  = "#00FFFF"
+        }
+        binding.pinkButton.setOnClickListener{
+            color  = "#FF1493"
         }
     }
 
     private fun bind(todo: Todo) {
         binding.apply {
             updateTodoTitle.setText(todo.Title, TextView.BufferType.SPANNABLE)
-            updateTodoNotes.setText(todo.Notes, TextView.BufferType.SPANNABLE)
+            updateTodoSubtitle.setText(todo.Notes, TextView.BufferType.SPANNABLE)
             updateButton.setOnClickListener{ updatetodo() }
-            deleteButton.setOnClickListener{ deleteTodo() }
         }
-    }
-
-    private fun deleteTodo() {
-        viewModel.deleteTodoData(todo)
-        val action = UpdateFragmentDirections.actionUpdateFragmentToListFragment()
-        findNavController().navigate(action)
     }
 
     private fun updatetodo() {
@@ -75,7 +88,8 @@ class UpdateFragment : Fragment() {
             viewModel.updateTodo(
                 this.navigationArgs.id,
                 this.binding.updateTodoTitle.text.toString(),
-                this.binding.updateTodoNotes.text.toString() )
+                this.binding.updateTodoSubtitle.text.toString(),
+                color)
             val action = UpdateFragmentDirections.actionUpdateFragmentToListFragment()
             findNavController().navigate(action)
         }
@@ -85,7 +99,7 @@ class UpdateFragment : Fragment() {
     fun isEntryvalid(): Boolean {
         return viewModel.isEntryValid(
             binding.updateTodoTitle.text.toString(),
-            binding.updateTodoNotes.text.toString()
+            binding.updateTodoSubtitle.text.toString()
         )
     }
 

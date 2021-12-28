@@ -17,7 +17,7 @@
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/addFragment"
         android:name="com.example.todo.Fragments.AddFragment"
         android:label="fragment_add"
@@ -25,17 +25,14 @@
         <action
             android:id="@+id/action_addFragment_to_listFragment"
             app:destination="@id/listFragment" />
-        <action
-            android:id="@+id/action_addFragment_to_bottom_sheet2"
-            app:destination="@id/bottom_sheet" />
         <argument
             android:name="color"
             app:argType="string"
             app:nullable="false"
             android:defaultValue="#FFFF00"/>
-    </fragment>
+    </dialog>
 
-    <fragment
+    <dialog
         android:id="@+id/detailFragment"
         android:name="com.example.todo.Fragments.DetailFragment"
         android:label="fragment_detail"
@@ -44,9 +41,9 @@
             android:name="id"
             app:argType="integer" />
         <action
-            android:id="@+id/action_detailFragment_to_updateFragment"
-            app:destination="@id/updateFragment" />
-    </fragment>
+            android:id="@+id/action_detailFragment_to_detail_View"
+            app:destination="@id/detail_View" />
+    </dialog>
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.todo.Fragments.UpdateFragment"
@@ -59,14 +56,16 @@
             android:name="id"
             app:argType="integer" />
     </fragment>
-    <dialog
-        android:id="@+id/bottom_sheet"
-        android:name="com.example.todo.Fragments.Bottom_sheet"
-        android:label="Bottom_sheet" >
+    <fragment
+        android:id="@+id/detail_View"
+        android:name="com.example.todo.Fragments.Detail_View"
+        android:label="Detail_View" >
         <action
-            android:id="@+id/action_bottom_sheet_to_addFragment"
-            app:destination="@id/addFragment"
-            app:popUpTo="@id/addFragment"
-            app:popUpToInclusive="true" />
-    </dialog>
+            android:id="@+id/action_detail_View_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
 </navigation>

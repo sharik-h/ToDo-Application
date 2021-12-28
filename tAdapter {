@@ -1,0 +1,71 @@
+[33mcommit 579dfc4764d598e6350726442dfb337c4ec3ed47[m[33m ([m[1;36mHEAD -> [m[1;32madapter[m[33m)[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sun Dec 26 19:22:04 2021 +0530
+
+    doing something wrong 001
+
+[33mcommit 9bccf75f3ddcb54b874cb95c5d45e1bc195b644b[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sat Dec 25 16:50:33 2021 +0530
+
+    sample changes were made
+
+[33mcommit d3a9ac7f13b527dd4e8e1c02e70decf4c9aae698[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Thu Dec 16 07:13:33 2021 +0530
+
+    Property for viewing which color is selected is added.
+
+[33mcommit 14fdf8731b33ac30c8af84ea4fee9adc19747cc9[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Tue Dec 7 21:49:04 2021 +0530
+
+    Bottom dailog and color changing properties were added.
+
+[33mcommit 6908967b2b44da7dabff651c2ea80a825d2bb96c[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sun Nov 21 15:35:00 2021 +0530
+
+    Deletion feature added.
+
+[33mcommit 3f6f50e04485b8cc859d935921892103ba103998[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sun Nov 21 15:01:27 2021 +0530
+
+    Updation feature add.
+
+[33mcommit 46b46b4654f6991284df2e691e7da342d72134ee[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sun Nov 21 11:17:18 2021 +0530
+
+    Detail Fragment was added
+
+[33mcommit 04d8c51ec9cdf705886d58c41c2d90483935809b[m[33m ([m[1;32msample[m[33m)[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Sun Nov 21 09:41:34 2021 +0530
+
+    not okay
+
+[33mcommit 1953c966df6012f9f96f45da8b2f4b13605aebc8[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Tue Nov 16 09:09:58 2021 +0530
+
+    RecyclerView adapter was added.
+
+[33mcommit befac6b3aab8683a61556b0552c0cd7a648e30bf[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Tue Nov 16 07:59:52 2021 +0530
+
+    Function for adding new value into database was succesfully added.
+
+[33mcommit 80c6c9e145cf55f32a6933e0bd655cabcf865fcd[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Tue Nov 16 07:33:15 2021 +0530
+
+    Data classes were added with insert function only.
+
+[33mcommit 406fe70b113deb0663d03bd0d912008f3fcdd575[m
+Author: Mohammed sharikh <mohammedsharik0123@gmail.com>
+Date:   Mon Nov 15 22:10:01 2021 +0530
+
+    Basic model which contains the simple ui with functional buttons

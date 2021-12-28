@@ -1,15 +1,9 @@
 package com.example.todo.Fragments
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.whenResumed
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.todo.R
@@ -17,13 +11,12 @@ import com.example.todo.ViewModel.TodoViewModel
 import com.example.todo.ViewModel.TodoViewModelFactory
 import com.example.todo.data.TodoApplication
 import com.example.todo.databinding.FragmentAddBinding
-import com.example.todo.databinding.FragmentBottomSheetBinding
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class AddFragment : Fragment() {
+class AddFragment : BottomSheetDialogFragment() {
 
-    var color = "#00FFFF"
-
+    val color_list = listOf<String>("#FF0000","#FFA500","#FFFF00","#00FF00","#00FFFF","#FF1493")
+    private var color: String = color_list.random()
 
     private val navigationArgs: AddFragmentArgs by navArgs()
 
@@ -54,16 +47,38 @@ class AddFragment : Fragment() {
             addNewTodoData()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }
-        binding.changeColor.setOnClickListener{
-            findNavController().navigate(R.id.action_addFragment_to_bottom_sheet2)
-            changeColor()
+        binding.cancelButton.setOnClickListener {
+            dismiss()
         }
-        changeColor()
+        binding.redButton.setOnClickListener{
+            changeColor("#FF0000")
+            color = "#FF0000"
+        }
+        binding.orangeButton.setOnClickListener{
+            changeColor("#FFA500")
+            color = "#FFA500"
+        }
+        binding.yellowButton.setOnClickListener{
+            changeColor("#FFFF00")
+            color = "#FFFF00"
+        }
+        binding.greenButton.setOnClickListener{
+            changeColor("#00FF00")
+            color = "#00FF00"
+        }
+        binding.aquaButton.setOnClickListener{
+            changeColor("#00FFFF")
+            color = "#00FFFF"
+        }
+        binding.pinkButton.setOnClickListener{
+            changeColor("#FF1493")
+            color = "#FF1493"
+        }
+        changeColor(color)
     }
 
-   fun changeColor() {
-       color = viewModel.whichcolor()
-       binding.colorIdnt.setColorFilter(Color.parseColor(color))
+   fun changeColor(color : String) {
+       binding.card.setCardBackgroundColor(Color.parseColor(color))
    }
 
     private fun addNewTodoData() {
@@ -71,6 +86,7 @@ class AddFragment : Fragment() {
             viewModel.addNewTodoData(
                 binding.TodoTitle.text.toString(),
                 binding.TodoNotes.text.toString(),
+                color
             )
         }
     }
