@@ -1,10 +1,12 @@
 package com.example.todo.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -70,6 +72,10 @@ class Detail_View : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
+        _binding = null
+        val inputMethodManager = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as
+                InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
         _binding = null
     }
 

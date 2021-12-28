@@ -58,6 +58,9 @@
         <argument
             android:name="color"
             app:argType="string" />
+        <action
+            android:id="@+id/action_updateFragment_to_detail_View"
+            app:destination="@id/detail_View" />
     </fragment>
     <fragment
         android:id="@+id/detail_View"
@@ -69,6 +72,9 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detail_View_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 
 </navigation>
