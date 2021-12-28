@@ -10,29 +10,30 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
 
     val allItems: LiveData<List<Todo>> = todoDao.getAllData().asLiveData()
 
-    fun isEntryValid(
-        Title: String,
-        Notes: String): Boolean {
-        if (Title.isBlank() || Notes.isBlank()) return false
+    fun isEntryValid(Title: String): Boolean {
+        if (Title.isBlank()) return false
         return true
     }
 
     fun addNewTodoData(
         Title: String,
+        subtitle: String,
         Notes: String,
         color: String
     ) {
-               val newData = getNewData(Title, Notes, color)
+               val newData = getNewData(Title, subtitle, Notes, color)
         InsertNewTodo(newData)
     }
 
     private fun getNewData(
         title: String,
+        subtitle: String,
         notes: String,
         color: String
     ): Todo  {
         return Todo(
             Title = title,
+            Subtitle = subtitle,
             Notes = notes,
             color = color)
     }
@@ -50,10 +51,11 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
     fun updateTodo(
         id: Int,
         Title: String,
+        subtitle: String,
         notes: String,
         color: String
     ) {
-        val updatedtodo = getupdatedtodoEntry(id, Title, notes, color )
+        val updatedtodo = getupdatedtodoEntry(id, Title, subtitle, notes, color )
         UpdateTodo(updatedtodo)
     }
 
@@ -66,12 +68,14 @@ class TodoViewModel(private val todoDao: TodoDao): ViewModel() {
     private fun getupdatedtodoEntry(
         id: Int,
         title: String,
+        subtitle: String,
         notes: String,
         color: String
     ): Todo {
         return Todo(
             id = id,
             Title = title,
+            Subtitle = subtitle,
             Notes = notes,
             color = color
         )

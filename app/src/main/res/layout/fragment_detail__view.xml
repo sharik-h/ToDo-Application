@@ -15,34 +15,31 @@
         android:gravity="center"
         android:fontFamily="@font/landasans_medium"
         android:textSize="34sp"
-        android:text="@string/sample_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/Todo_Notestext"
+        android:id="@+id/Todo_Subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/landasans_medium"
         android:gravity="center"
-        android:hint="@string/this_is_sample_note"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Todo_Titletext" />
 
     <TextView
-        android:id="@+id/Todo_Notes_Notes"
+        android:id="@+id/Todo_Notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/landasans_medium"
         android:gravity="center"
-        android:hint="@string/notes_sample"
         android:padding="15dp"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Todo_Notestext" />
+        app:layout_constraintTop_toBottomOf="@+id/Todo_Subtitle" />
 
     <Button
         android:id="@+id/edit_button"

@@ -58,12 +58,13 @@ class Detail_View : Fragment() {
     private fun bind(todo: Todo) {
         binding.apply {
             TodoTitletext.text = todo.Title
-            TodoNotestext.text = todo.Notes
+            TodoSubtitle.text = todo.Subtitle
+            TodoNotes.text = todo.Notes
         }
     }
 
     private fun editAction(id: Int) {
-        val action = Detail_ViewDirections.actionDetailViewToUpdateFragment(id)
+        val action = Detail_ViewDirections.actionDetailViewToUpdateFragment(id,todo.color)
         findNavController().navigate(action)
     }
 

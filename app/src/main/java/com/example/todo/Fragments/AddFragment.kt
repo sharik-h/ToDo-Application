@@ -85,6 +85,7 @@ class AddFragment : BottomSheetDialogFragment() {
         if (isEntryValid()){
             viewModel.addNewTodoData(
                 binding.TodoTitle.text.toString(),
+                binding.TodoSubtitle.text.toString(),
                 binding.TodoNotes.text.toString(),
                 color
             )
@@ -92,11 +93,7 @@ class AddFragment : BottomSheetDialogFragment() {
     }
 
     private fun isEntryValid(): Boolean {
-        return viewModel.isEntryValid(
-            binding.TodoTitle.text.toString(),
-            binding.TodoNotes.text.toString()
-        )
-
+        return viewModel.isEntryValid(binding.TodoTitle.text.toString())
     }
 
     override fun onDestroy() {

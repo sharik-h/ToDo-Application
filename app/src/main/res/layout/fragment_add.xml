@@ -50,7 +50,7 @@
             android:hint="@string/subtitle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Todo_Notes"
+                android:id="@+id/Todo_Subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textAutoComplete|textCapWords"
@@ -68,7 +68,7 @@
             android:hint="@string/subtitle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Todo_Notes_Notes"
+                android:id="@+id/Todo_Notes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textMultiLine"

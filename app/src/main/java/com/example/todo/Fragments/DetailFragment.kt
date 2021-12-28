@@ -61,7 +61,7 @@ class DetailFragment : BottomSheetDialogFragment() {
     private fun bind(todo: Todo){
         binding.apply {
             TodoTitletext.text = todo.Title
-            TodoNotestext.text = todo.Notes
+            TodoNotestext.text = todo.Subtitle
             detailButton.setOnClickListener{ gotoDetail()}
             deleteButton.setOnClickListener{ deleteAction() }
         }

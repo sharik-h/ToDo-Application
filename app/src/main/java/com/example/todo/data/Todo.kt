@@ -9,6 +9,7 @@ data class Todo (
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     @ColumnInfo(name = "Title")val Title: String,
+    @ColumnInfo(name = "Subtitle")val Subtitle: String,
     @ColumnInfo(name = "Notes")val Notes: String,
     @ColumnInfo(name = "color") var color: String
     )

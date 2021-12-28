@@ -36,7 +36,7 @@ class TodoListAdapter(private val OnItemClicked: (Todo) -> Unit) :
 
                 binding.apply {
                     title.text = todo.Title
-                    notes.text = todo.Notes
+                    notes.text = todo.Subtitle
                     sampleCard.setCardBackgroundColor(Color.parseColor(todo.color))
                 }
 

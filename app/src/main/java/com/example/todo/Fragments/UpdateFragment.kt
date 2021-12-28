@@ -26,9 +26,8 @@ class UpdateFragment : Fragment() {
         )
     }
 
-    lateinit var todo: Todo
     private lateinit var color: String
-
+    lateinit var todo: Todo
 
     private var _binding: FragmentUpdateBinding? = null
     private val binding get() = _binding!!
@@ -49,7 +48,7 @@ class UpdateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.id
-
+        color = navigationArgs.color
         viewModel.retriveData(id).observe(this.viewLifecycleOwner){ selectedItem ->
              todo = selectedItem
 
@@ -78,7 +77,8 @@ class UpdateFragment : Fragment() {
     private fun bind(todo: Todo) {
         binding.apply {
             updateTodoTitle.setText(todo.Title, TextView.BufferType.SPANNABLE)
-            updateTodoSubtitle.setText(todo.Notes, TextView.BufferType.SPANNABLE)
+            updateTodoSubtitle.setText(todo.Subtitle, TextView.BufferType.SPANNABLE)
+            updateTodoNotes.setText(todo.Notes, TextView.BufferType.SPANNABLE)
             updateButton.setOnClickListener{ updatetodo() }
         }
     }
@@ -89,7 +89,8 @@ class UpdateFragment : Fragment() {
                 this.navigationArgs.id,
                 this.binding.updateTodoTitle.text.toString(),
                 this.binding.updateTodoSubtitle.text.toString(),
-                color)
+                this.binding.updateTodoNotes.text.toString(),
+                this.color)
             val action = UpdateFragmentDirections.actionUpdateFragmentToListFragment()
             findNavController().navigate(action)
         }
@@ -97,10 +98,7 @@ class UpdateFragment : Fragment() {
 
 
     fun isEntryvalid(): Boolean {
-        return viewModel.isEntryValid(
-            binding.updateTodoTitle.text.toString(),
-            binding.updateTodoSubtitle.text.toString()
-        )
+        return viewModel.isEntryValid(binding.updateTodoTitle.text.toString())
     }
 
     override fun onDestroy() {

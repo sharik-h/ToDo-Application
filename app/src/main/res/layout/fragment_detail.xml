@@ -20,7 +20,7 @@
            android:gravity="center"
            android:fontFamily="@font/landasans_medium"
            android:textSize="34sp"
-           android:text="@string/sample_title"
+
            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -31,7 +31,6 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/landasans_medium"
             android:textSize="26sp"
-            android:hint="@string/this_is_sample_note"
             app:layout_constraintTop_toBottomOf="@+id/Todo_Titletext" />
 
         <TextView
@@ -42,7 +41,6 @@
             android:gravity="center"
             android:fontFamily="@font/landasans_medium"
             android:textSize="26sp"
-            android:hint="@string/notes_sample"
             app:layout_constraintTop_toBottomOf="@+id/Todo_Titletext" />
 
 
