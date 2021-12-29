@@ -1,5 +1,6 @@
 package com.example.todo.adapter
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.provider.Settings.Secure.getString
 import android.view.LayoutInflater
@@ -37,9 +38,8 @@ class TodoListAdapter(private val OnItemClicked: (Todo) -> Unit) :
                 binding.apply {
                     title.text = todo.Title
                     notes.text = todo.Subtitle
-                    sampleCard.setCardBackgroundColor(Color.parseColor(todo.color))
+                    tagColor.setBackgroundColor(Color.parseColor(todo.color))
                 }
-
             }
         }
 

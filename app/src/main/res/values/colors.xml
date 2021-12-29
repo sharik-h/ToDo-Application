@@ -15,4 +15,6 @@
     <color name="blue">#1E90FF</color>
     <color name="pink">#FF1493</color>
 
+    <color name="pur_drk">#00235D</color>
+    <color name="pur_light">#3451A1</color>
 </resources>

@@ -78,7 +78,7 @@ class AddFragment : BottomSheetDialogFragment() {
     }
 
    fun changeColor(color : String) {
-       binding.card.setCardBackgroundColor(Color.parseColor(color))
+       binding.TagColor.setBackgroundColor(Color.parseColor(color))
    }
 
     private fun addNewTodoData() {

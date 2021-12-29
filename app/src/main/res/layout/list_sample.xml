@@ -11,9 +11,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/sample_card"
         android:layout_width="170dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/pur_drk"
+        android:elevation="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" >
 
@@ -21,21 +23,39 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="#00FD0909"
+            android:layout_margin="14dp"
             android:fontFamily="@font/landasans_medium"
-
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="34sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_tag"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="18.5dp">
+
+        <ImageView
+            android:id="@+id/tag_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background" />
+
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/landasans_medium"
+            android:textColor="@color/white"
             android:textSize="25sp" />
 
 

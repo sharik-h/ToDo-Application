@@ -2,6 +2,7 @@ package com.example.todo.Fragments
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -61,7 +62,9 @@ class DetailFragment : BottomSheetDialogFragment() {
     private fun bind(todo: Todo){
         binding.apply {
             TodoTitletext.text = todo.Title
-            TodoNotestext.text = todo.Subtitle
+            TodoSubtitle.text = todo.Subtitle
+            TodoNotes.text = todo.Notes
+            TagColor.setBackgroundColor(Color.parseColor(todo.color))
             detailButton.setOnClickListener{ gotoDetail()}
             deleteButton.setOnClickListener{ deleteAction() }
         }

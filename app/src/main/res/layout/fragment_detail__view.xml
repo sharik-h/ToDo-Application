@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
+    android:background="#3451A1"
     android:orientation="vertical">
 
 
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:fontFamily="@font/landasans_medium"
+        android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -24,8 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/landasans_medium"
-        android:gravity="center"
+        android:textColor="@color/white"
         android:textSize="26sp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Todo_Titletext" />
 
@@ -35,9 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/landasans_medium"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         android:gravity="center"
         android:padding="15dp"
-        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Todo_Subtitle" />
 

@@ -2,9 +2,26 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#3451A1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_tag"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="26dp"
+        app:cardCornerRadius="18.5dp">
+
+        <ImageView
+            android:id="@+id/Tag_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background" />
+
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,6 +30,7 @@
         android:paddingBottom="10dp"
         android:orientation="vertical">
 
+
        <TextView
            android:id="@+id/Todo_Titletext"
            android:layout_width="match_parent"
@@ -20,26 +38,29 @@
            android:gravity="center"
            android:fontFamily="@font/landasans_medium"
            android:textSize="34sp"
-
+           android:hint="sample text"
+           android:textColor="@color/white"
            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/Todo_Notestext"
+            android:id="@+id/Todo_Subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/landasans_medium"
+            android:textColor="@color/white"
             android:textSize="26sp"
             app:layout_constraintTop_toBottomOf="@+id/Todo_Titletext" />
 
         <TextView
-            android:id="@+id/Todo_Notes_Notes"
+            android:id="@+id/Todo_Notes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:padding="15dp"
             android:gravity="center"
             android:fontFamily="@font/landasans_medium"
+            android:textColor="@color/white"
             android:textSize="26sp"
             app:layout_constraintTop_toBottomOf="@+id/Todo_Titletext" />
 
